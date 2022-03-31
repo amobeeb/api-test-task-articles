@@ -31,7 +31,7 @@ class ArticleController extends Controller
 //     */
     public function index()
     {
-        $article = Article::descOrder()->get(); //articles in descending order
+        $article = Article::descOrder()->paginate(); //articles in descending order
         return $this->onSuccess(200, "Success", new ArticleCollection($article));
     }
 
