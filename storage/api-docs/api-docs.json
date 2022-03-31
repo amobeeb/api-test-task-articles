@@ -1,0 +1,112 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test Task: Article",
+        "version": "0.1"
+    },
+    "paths": {
+        "/articles": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "Get list of Articles",
+                "description": "Returns list of articles",
+                "operationId": "getArticleList",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/articles/1": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "Show Article",
+                "description": "Show selected articles using Article Id",
+                "operationId": "showArticleDetails",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/articles/1/comment": {
+            "get": {
+                "tags": [
+                    "ArticlesComment"
+                ],
+                "summary": "Show Article Comments",
+                "description": "Show list of comments on Article",
+                "operationId": "ArticleComment",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/articles/1/like": {
+            "get": {
+                "tags": [
+                    "ArticlesComment"
+                ],
+                "summary": "Increment Article Likes",
+                "description": "Increment the numbers of Article Like",
+                "operationId": "ArticleLike",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/articles/1/View": {
+            "get": {
+                "tags": [
+                    "ArticlesView"
+                ],
+                "summary": "Increment Article Views",
+                "description": "Increment the numbers of Article View",
+                "operationId": "ArticleView",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
